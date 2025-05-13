@@ -1,0 +1,31 @@
+{
+  "timestamp": "2025-05-12T05:28:36.948343",
+  "model": "prsdm/phi-2-medquad",
+  "num_samples": 100,
+  "metrics": {
+    "bleu": {
+      "bleu": 1.1569264518396693e-07,
+      "precisions": [
+        0.8064160646504225,
+        0.4320069418619065,
+        0.2492782728756119,
+        0.17236557772975722
+      ],
+      "brevity_penalty": 3.3075737395159025e-07,
+      "length_ratio": 0.0628066505683129,
+      "translation_length": 8167,
+      "reference_length": 130034
+    },
+    "rouge": {
+      "rouge1": 0.09616286879381036,
+      "rouge2": 0.05124773176113481,
+      "rougeL": 0.07402355021083475,
+      "rougeLsum": 0.08945345595014975
+    }
+  },
+  "config": {
+    "device": "cuda:0",
+    "dtype": "torch.float16",
+    "max_new_tokens": 100
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "timestamp": "2025-05-12T23:03:01.265788",
+  "params": {
+    "model_name": "prsdm/phi-2-medquad",
+    "max_new_tokens": 100,
+    "temperature": 1.0
+  },
+  "metrics": {
+    "bleu": 1.1569264518396693e-07,
+    "rouge": {
+      "rouge1": 0.09621750582666282,
+      "rouge2": 0.05121873046529911,
+      "rougeL": 0.07373574553458365,
+      "rougeLsum": 0.08932930624449881
+    },
+    "avg_latency": 2.6944788479804993
+  }
+}

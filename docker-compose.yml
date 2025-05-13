@@ -1,0 +1,27 @@
+# docker-compose.yml
+
+version: '3.9'
+
+services:
+  api:
+    build:
+      context: ./app_mlop
+    container_name: medqa_api_mlop
+    ports:
+      - "8001:8001"
+    environment:
+      - CLEARML_API_ACCESS_KEY=your_key
+      - CLEARML_API_SECRET_KEY=your_secret
+      - CLEARML_API_HOST=https://app.clear.ml
+    restart: unless-stopped
+
+  streamlit:
+    build:
+      context: ./app_mlop
+    container_name: medqa_ui_mlop
+    command: streamlit run qa_ui_mlop.py --server.port 8501 --server.address 0.0.0.0
+    ports:
+      - "8501:8501"
+    depends_on:
+      - api
+    restart: unless-stopped
